@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This module contains the solution to the pascals
+problem
+"""
+
 
 def pascal_triangle(n):
     """
