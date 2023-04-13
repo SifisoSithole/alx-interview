@@ -48,7 +48,6 @@ try:
     for line in sys.stdin:
 
         if not regex.fullmatch(line.strip()):
-            print('skip')
             continue
         line = line.split()
         total_size += int(line[-1])
