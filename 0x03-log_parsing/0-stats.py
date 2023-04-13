@@ -42,22 +42,20 @@ status_codes = {
     '405': 0,
     '500': 0
 }
-temp_status_codes = status_codes.copy()
 total_size = 0
 try:
     for line in sys.stdin:
-
         if not regex.fullmatch(line.strip()):
             continue
         line = line.split()
         total_size += int(line[-1])
         status_code = line[-2]
-        if status_code in temp_status_codes.keys():
-            temp_status_codes[status_code] += 1
+        if status_code in status_codes.keys():
+            status_codes[status_code] += 1
         counter += 1
         if counter == 10:
-            print_stats(total_size, temp_status_codes)
+            print_stats(total_size, status_codes)
             counter = 0
-            temp_status_codes = status_codes.copy()
+            status_codes = status_codes.copy()
 finally:
-    print_stats(total_size, temp_status_codes)
+    print_stats(total_size, status_codes)
