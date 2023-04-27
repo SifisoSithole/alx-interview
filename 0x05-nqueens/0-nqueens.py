@@ -2,9 +2,6 @@
 """
 Solution to the N queens problem
 """
-
-
-"""This program solves the N queens puzzle"""
 import sys
 
 
