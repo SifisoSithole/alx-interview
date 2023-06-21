@@ -3,6 +3,7 @@
 Prime game
 """
 
+
 def isWinner(x, nums):
     def is_prime(num):
         if num < 2:
@@ -14,7 +15,7 @@ def isWinner(x, nums):
 
     def play_game(n):
         if n == 1:
-            return "Ben" 
+            return "Ben"
 
         numbers = set(range(2, n + 1))
         player = "Maria"
@@ -27,7 +28,7 @@ def isWinner(x, nums):
                     break
 
             if prime is None:
-                return player 
+                return player
 
             numbers.difference_update(range(prime, n + 1, prime))
 
@@ -43,6 +44,4 @@ def isWinner(x, nums):
     elif maria_wins < ben_wins:
         return "Ben"
     else:
-        return None  
-
-
+        return None
