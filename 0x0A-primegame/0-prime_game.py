@@ -5,7 +5,13 @@ Prime game
 
 
 def isWinner(x, nums):
+    """
+    winner of Prime game
+    """
     def is_prime(num):
+        """
+        check if prime
+        """
         if num < 2:
             return False
         for i in range(2, int(num ** 0.5) + 1):
@@ -14,6 +20,7 @@ def isWinner(x, nums):
         return True
 
     def play_game(n):
+        """ play game """
         if n == 1:
             return "Ben"
 
